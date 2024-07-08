@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="820.0" prefWidth="1350.0" style="-fx-background-color: #0c2027;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.LoginController">
+    <children>
+        <Pane fx:id="si_loginForm" layoutX="705.0" layoutY="-3.0" prefHeight="820.0" prefWidth="651.0" AnchorPane.bottomAnchor="3.0" AnchorPane.topAnchor="-3.0">
+            <children>
+            <ImageView fitHeight="300.0" fitWidth="300.0" layoutX="175.0" layoutY="-29.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/logo1.png" />
+               </image>
+            </ImageView>
+                <Button fx:id="si_loginBtn" layoutX="372.0" layoutY="413.0" mnemonicParsing="false" onAction="#handleButtonAction_si" prefHeight="40.0" prefWidth="185.0" styleClass="login-btn" stylesheets="@../css/gotaniDesign.css" text="Masuk Akun" textFill="#0c2027">
+               <font>
+                  <Font size="16.0" />
+               </font></Button>
+                <Button fx:id="side_CreateBtn" layoutX="98.0" layoutY="667.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="40.0" prefWidth="457.0" styleClass="login-btn" stylesheets="@../css/gotaniDesign.css" text="Belum memiliki akun" textFill="#0c2027">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+                <Separator layoutX="97.0" layoutY="625.0" prefHeight="23.0" prefWidth="457.0" />
+                <Label alignment="CENTER" layoutX="301.0" layoutY="625.0" prefHeight="23.0" prefWidth="49.0" style="-fx-background-color: #0c2027;" text="Atau" textFill="WHITE">
+                    <font>
+                        <Font name="Segoe UI" size="16.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="si_username" layoutX="97.0" layoutY="262.0" prefHeight="40.0" prefWidth="457.0" promptText="Username">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </TextField>
+                <PasswordField fx:id="si_password" layoutX="97.0" layoutY="319.0" prefHeight="40.0" prefWidth="457.0" promptText="Password">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </PasswordField>
+            <Hyperlink fx:id="si_forgotPass" layoutX="94.0" layoutY="367.0" text="Lupa Password">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Hyperlink>
+            <Label alignment="CENTER" layoutX="263.0" layoutY="216.0" prefHeight="29.0" prefWidth="122.0" style="-fx-background-color: #0c2027;" text="Masuk Akun" textFill="#e9b336">
+               <font>
+                  <Font name="Segoe UI Bold" size="20.0" />
+               </font>
+            </Label>
+              <Label alignment="CENTER" layoutX="503.0" layoutY="785.0" opacity="0.30302" prefHeight="23.0" prefWidth="111.0" text="Dibuat oleh: AM1N" textFill="#a6b1cc">
+                  <font>
+                      <Font name="Segoe UI" size="12.0" />
+                  </font>
+              </Label>
+            </children>
+        </Pane>
+      <Pane fx:id="signupForm" layoutX="1.0" layoutY="-4.0" prefHeight="820.0" prefWidth="651.0">
+         <children>
+            <ImageView fitHeight="300.0" fitWidth="300.0" layoutX="168.0" layoutY="-30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/logo1.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="su_signupBtn" layoutX="370.0" layoutY="451.0" mnemonicParsing="false" onAction="#handleButtonAction_su" prefHeight="40.0" prefWidth="185.0" styleClass="login-btn" stylesheets="@../css/gotaniDesign.css" text="Buat Akun" textFill="#0c2027">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="side_LoginBtn" layoutX="98.0" layoutY="667.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="40.0" prefWidth="457.0" styleClass="login-btn" stylesheets="@../css/gotaniDesign.css" text="Sudah memiliki akun" textFill="#0c2027">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Separator layoutX="97.0" layoutY="625.0" prefHeight="23.0" prefWidth="457.0" />
+            <Label alignment="CENTER" layoutX="301.0" layoutY="625.0" prefHeight="23.0" prefWidth="49.0" style="-fx-background-color: #0c2027;" text="Atau" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI" size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="su_username" layoutX="97.0" layoutY="262.0" prefHeight="40.0" prefWidth="457.0" promptText="Username">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </TextField>
+            <PasswordField fx:id="su_password" layoutX="97.0" layoutY="373.0" prefHeight="40.0" prefWidth="457.0" promptText="Password">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </PasswordField>
+            <Label alignment="CENTER" layoutX="259.0" layoutY="222.0" prefHeight="29.0" prefWidth="122.0" style="-fx-background-color: #0c2027;" text="Buat Akun" textFill="#e9b336">
+               <font>
+                  <Font name="Segoe UI Bold" size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="su_email" layoutX="98.0" layoutY="317.0" prefHeight="40.0" prefWidth="457.0" promptText="E-mail">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </TextField>
+         </children>
+      </Pane>
+        <AnchorPane fx:id="side_form" prefHeight="820.0" prefWidth="455.0" style="-fx-background-color: #ffffff;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+            <ImageView fitHeight="853.0" fitWidth="734.0" layoutX="-2.0" layoutY="-28.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/bg_loginfixx.jpg" />
+               </image>
+            </ImageView>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0c2027" height="824.0" layoutX="-2.0" layoutY="-3.0" opacity="0.8" stroke="TRANSPARENT" strokeType="INSIDE" width="734.0" />
+                <ImageView fitHeight="400.0" fitWidth="400.0" layoutX="168.0" layoutY="142.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../images/logo4.png" />
+                    </image>
+                </ImageView>
+            <Text fill="#e9b336" fontSmoothingType="LCD" layoutX="160.0" layoutY="538.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Memberdayakan Petani, Mengembangkan Masa Depan." textAlignment="CENTER" wrappingWidth="418.33465576171875">
+               <font>
+                  <Font name="System Bold" size="28.0" />
+               </font>
+            </Text>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>

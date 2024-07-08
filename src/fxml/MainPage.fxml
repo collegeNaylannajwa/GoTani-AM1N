@@ -1,0 +1,947 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.AreaChart?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SplitMenuButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.BoxBlur?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="820.0" prefWidth="1350.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MainPageController">
+   <children>
+      <BorderPane prefHeight="820.0" prefWidth="1350.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <left>
+            <VBox prefHeight="958.0" prefWidth="245.0" style="-fx-background-color: #0c2027;" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="185.0" fitWidth="185.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/logo4.png" />
+                     </image>
+                     <effect>
+                        <DropShadow>
+                           <color>
+                              <Color opacity="0.5" />
+                           </color>
+                        </DropShadow>
+                     </effect>
+                     <VBox.margin>
+                        <Insets left="25.0" top="5.0" />
+                     </VBox.margin>
+                  </ImageView>
+                  <Label fx:id="usn" prefHeight="27.0" prefWidth="177.0" text="Username" textFill="#e9b336">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="50.0" />
+                     </VBox.margin>
+                     <graphic>
+                        <Label fx:id="usn1" prefHeight="30.0" prefWidth="50.0" text="Halo," textFill="#e9b336">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Label>
+                     </graphic>
+                  </Label>
+                  <Button fx:id="berandaBtn" mnemonicParsing="false" onAction="#handleBerandaBtn" prefHeight="36.0" prefWidth="180.0" styleClass="login-btn" stylesheets="@../css/gotaniDesign.css" text="Beranda">
+                     <VBox.margin>
+                        <Insets left="30.0" top="15.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Text fill="#e9b336" strokeType="OUTSIDE" strokeWidth="0.0" text="Toko">
+                     <VBox.margin>
+                        <Insets left="30.0" top="30.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Text>
+                  <Button fx:id="beliProdukBtn" mnemonicParsing="false" onAction="#handleBeliProdukBtn" prefHeight="36.0" prefWidth="180.0" styleClass="login-btn" stylesheets="@../css/gotaniDesign.css" text="Beli Produk">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="30.0" top="5.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="dashboardBtn" mnemonicParsing="false" onAction="#handleDashboardBtn" prefHeight="36.0" prefWidth="180.0" styleClass="hpagex-btn" stylesheets="@../css/gotaniDesign.css" text="Dashboard">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="30.0" top="15.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="unggahBtn" mnemonicParsing="false" onAction="#handleUnggahBtn" prefHeight="36.0" prefWidth="180.0" styleClass="hpagex-btn" stylesheets="@../css/gotaniDesign.css" text="Unggah Produk">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="30.0" top="15.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="customersBtn" mnemonicParsing="false" onAction="#handlePelangganBtn" prefHeight="36.0" prefWidth="180.0" styleClass="hpagex-btn" stylesheets="@../css/gotaniDesign.css" text="Pelanggan">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="30.0" top="15.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Text fill="#e9b336" strokeType="OUTSIDE" strokeWidth="0.0" text="Artikel">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="30.0" top="30.0" />
+                     </VBox.margin>
+                  </Text>
+                  <Button fx:id="bacaArtikelBtn" mnemonicParsing="false" onAction="#handleBacaArtikelBtn" prefHeight="36.0" prefWidth="180.0" styleClass="login-btn" stylesheets="@../css/gotaniDesign.css" text="Baca Artikel">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="30.0" top="5.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="unggahArtikelBtn" mnemonicParsing="false" onAction="#handleUnggahArtikelBtn" prefHeight="36.0" prefWidth="180.0" styleClass="hpagex-btn" stylesheets="@../css/gotaniDesign.css" text="Unggah Artikel">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="30.0" top="15.0" />
+                     </VBox.margin>
+                  </Button>
+                  <HBox prefHeight="0.0" prefWidth="245.0">
+                     <children>
+                        <ImageView fitHeight="32.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" rotate="180.0">
+                           <image>
+                              <Image url="@../images/logOut5.png" />
+                           </image>
+                        </ImageView>
+                        <Button fx:id="logoutBtn" mnemonicParsing="false" onAction="#logout" prefHeight="30.0" prefWidth="75.0" styleClass="login-btn" stylesheets="@../css/gotaniDesign.css" text="Log out">
+                           <HBox.margin>
+                              <Insets left="5.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Button>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="15.0" top="120.0" />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+               <effect>
+                  <DropShadow>
+                     <color>
+                        <Color opacity="0.5" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </VBox>
+         </left>
+         <center>
+            <AnchorPane prefHeight="820.0" prefWidth="1136.0" BorderPane.alignment="CENTER">
+               <children>
+                  <AnchorPane fx:id="beranda_form" prefHeight="820.0" prefWidth="1105.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <ImageView fitHeight="820.0" fitWidth="1140.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/beranda.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="418.0" fitWidth="436.0" layoutX="345.0" layoutY="311.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/logo1.png" />
+                           </image>
+                        </ImageView>
+                        <Text fill="#e9b336" fontSmoothingType="LCD" layoutX="382.0" layoutY="600.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Memberdayakan Petani, Mengembangkan Masa Depan." textAlignment="CENTER" wrappingWidth="364.33465576171875">
+                           <font>
+                              <Font name="System Bold" size="24.0" />
+                           </font>
+                        </Text>
+                        <Text fill="#0c2027" layoutX="669.0" layoutY="784.0" opacity="0.5" strokeType="OUTSIDE" strokeWidth="0.0" text="Dibuat oleh kelompok AM1N: Naylannajwa 23523183 || Radja 23523161 || Haidar 23523157 || Daula Bisma 23523109" wrappingWidth="428.2005615234375">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Text>
+                        <Text fill="#192929" layoutX="50.0" layoutY="750.0" strokeType="OUTSIDE" strokeWidth="0.0" text="gotani@gmail.com" wrappingWidth="428.2005615234375">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Text>
+                        <Text fill="#192929" layoutX="48.0" layoutY="779.0" strokeType="OUTSIDE" strokeWidth="0.0" text="+62 812 3456 7890" wrappingWidth="428.2005615234375">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Text>
+                        <Text fill="#192929" layoutX="50.0" layoutY="807.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\@gotani_official" wrappingWidth="428.2005615234375">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="dashboard_form" prefHeight="820.0" prefWidth="1105.0" style="-fx-background-color: 6b9671;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <AnchorPane layoutX="14.0" layoutY="14.0" prefHeight="229.0" prefWidth="1078.0" stylesheets="@../css/gotaniDesign.css" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="13.0" AnchorPane.topAnchor="14.0">
+                           <children>
+                              <ScrollPane layoutX="9.0" layoutY="10.0" prefHeight="210.0" prefWidth="1060.0" AnchorPane.bottomAnchor="9.0" AnchorPane.leftAnchor="9.0" AnchorPane.rightAnchor="9.0" AnchorPane.topAnchor="10.0">
+                                 <content>
+                                    <AnchorPane prefHeight="193.0" prefWidth="1358.0">
+                                       <children>
+                                          <AnchorPane layoutX="14.0" layoutY="10.0" prefHeight="180.0" prefWidth="308.0" styleClass="gradient" stylesheets="@../css/gotaniDesign.css">
+                                             <children>
+                                                <Label layoutX="173.0" layoutY="145.0" text="Jumlah Pelanggan" textFill="WHITE">
+                                                   <font>
+                                                      <Font size="15.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="dashboard_NC" alignment="CENTER_RIGHT" layoutX="139.0" layoutY="17.0" prefHeight="21.0" prefWidth="147.0" text="0" textFill="WHITE">
+                                                   <font>
+                                                      <Font size="15.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </AnchorPane>
+                                          <AnchorPane layoutX="333.0" layoutY="10.0" prefHeight="180.0" prefWidth="341.0" styleClass="gradient" stylesheets="@../css/gotaniDesign.css">
+                                             <children>
+                                                <Label layoutX="199.0" layoutY="145.0" text="Pendapatan hari ini" textFill="WHITE">
+                                                   <font>
+                                                      <Font size="15.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="dashboard_TI" alignment="CENTER_RIGHT" layoutX="173.0" layoutY="19.0" prefHeight="21.0" prefWidth="147.0" text="Rp. 0" textFill="WHITE">
+                                                   <font>
+                                                      <Font size="15.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </AnchorPane>
+                                          <AnchorPane layoutX="684.0" layoutY="9.0" prefHeight="181.0" prefWidth="328.0" styleClass="gradient" stylesheets="@../css/gotaniDesign.css">
+                                             <children>
+                                                <Label layoutX="198.0" layoutY="146.0" stylesheets="@../css/gotaniDesign.css" text="Total Pendapatan" textFill="WHITE">
+                                                   <font>
+                                                      <Font size="15.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="dashboard_TotalI" alignment="CENTER_RIGHT" layoutX="158.0" layoutY="17.0" prefHeight="21.0" prefWidth="147.0" stylesheets="@../css/gotaniDesign.css" text="Rp. 0" textFill="WHITE">
+                                                   <font>
+                                                      <Font size="15.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </AnchorPane>
+                                          <AnchorPane layoutX="1022.0" layoutY="9.0" prefHeight="181.0" prefWidth="328.0" styleClass="gradient" stylesheets="@../css/gotaniDesign.css" AnchorPane.rightAnchor="8.0">
+                                             <children>
+                                                <Label layoutX="137.0" layoutY="140.0" text="Jumlah Produk yang Terjual" textFill="WHITE">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="dashboard_NSP" alignment="CENTER_RIGHT" layoutX="158.0" layoutY="18.0" prefHeight="21.0" prefWidth="147.0" text="0" textFill="WHITE">
+                                                   <font>
+                                                      <Font size="15.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </AnchorPane>
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </ScrollPane>
+                           </children>
+                           <styleClass>
+                              <String fx:value="green-bg" />
+                              <String fx:value="radius" />
+                              <String fx:value="shadow" />
+                           </styleClass>
+                        </AnchorPane>
+                        <AnchorPane layoutX="14.0" layoutY="271.0" prefHeight="535.0" prefWidth="1078.0" stylesheets="@../css/gotaniDesign.css" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="13.0" AnchorPane.topAnchor="271.0">
+                           <children>
+                              <AnchorPane layoutX="14.0" layoutY="18.0" prefHeight="565.0" prefWidth="528.0" stylesheets="@../../../CafeShopManagementSystem-main/cafeShopManagementSystem/src/cafeshopmanagementsystem/mainFormDesign.css" AnchorPane.bottomAnchor="17.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="536.0" AnchorPane.topAnchor="18.0">
+                                 <styleClass>
+                                    <String fx:value="white-bg" />
+                                    <String fx:value="shadow" />
+                                    <String fx:value="radius" />
+                                 </styleClass>
+                                 <children>
+                                    <AreaChart fx:id="dashboard_incomeChart" layoutX="-11.0" layoutY="-38.0" prefHeight="548.0" prefWidth="543.0" style="-fx-alternative-column-fill-visible: #0c2027;" title="Grafik Pendapatan" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <xAxis>
+                                          <CategoryAxis side="BOTTOM" />
+                                       </xAxis>
+                                       <yAxis>
+                                          <NumberAxis side="LEFT" />
+                                       </yAxis>
+                                    </AreaChart>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="486.0" layoutY="18.0" prefHeight="564.0" prefWidth="511.0" stylesheets="@../../../CafeShopManagementSystem-main/cafeShopManagementSystem/src/cafeshopmanagementsystem/mainFormDesign.css" AnchorPane.bottomAnchor="18.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="18.0">
+                                 <styleClass>
+                                    <String fx:value="white-bg" />
+                                    <String fx:value="shadow" />
+                                    <String fx:value="radius" />
+                                 </styleClass>
+                                 <children>
+                                    <BarChart fx:id="dashboard_CustomerChart" layoutX="-87.0" layoutY="-70.0" prefHeight="344.0" prefWidth="413.0" title="Grafik Pelanggan" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <xAxis>
+                                          <CategoryAxis side="BOTTOM" />
+                                       </xAxis>
+                                       <yAxis>
+                                          <NumberAxis side="LEFT" />
+                                       </yAxis>
+                                    </BarChart>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                           <styleClass>
+                              <String fx:value="radius" />
+                              <String fx:value="shadow" />
+                              <String fx:value="green-bg" />
+                           </styleClass>
+                        </AnchorPane>
+                        <Separator layoutX="1.0" layoutY="249.0" prefHeight="16.0" prefWidth="1107.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="-3.0" AnchorPane.topAnchor="249.0" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="inventory_form" prefHeight="820.0" prefWidth="1105.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <AnchorPane layoutX="15.0" layoutY="14.0" prefHeight="286.0" prefWidth="849.0" stylesheets="@../css/gotaniDesign.css" AnchorPane.bottomAnchor="300.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0">
+                           <styleClass>
+                              <String fx:value="white-bg" />
+                              <String fx:value="radius" />
+                              <String fx:value="shadow" />
+                              
+                           </styleClass>
+                           <children>
+                              <TableView fx:id="inventory_tableView" layoutX="18.0" layoutY="16.0" onMouseClicked="#inventorySelectData" prefHeight="254.0" prefWidth="814.0" stylesheets="@../css/gotaniDesign.css" tableMenuButtonVisible="true" AnchorPane.bottomAnchor="16.0" AnchorPane.leftAnchor="18.0" AnchorPane.rightAnchor="17.0" AnchorPane.topAnchor="16.0">
+                                 <columns>
+                                    <TableColumn fx:id="inventory_col_productID" prefWidth="75.0" text="ID Produk" />
+                                    <TableColumn fx:id="inventory_col_productName" prefWidth="126.0" text="Nama Produk" />
+                                    <TableColumn fx:id="inventory_col_type" prefWidth="128.0" text="Tipe" />
+                                    <TableColumn fx:id="inventory_col_stock" prefWidth="93.0" text="Stok" />
+                                    <TableColumn fx:id="inventory_col_price" prefWidth="100.0" text="Harga" />
+                                    <TableColumn fx:id="inventory_col_status" prefWidth="121.0" text="Status" />
+                                    <TableColumn fx:id="inventory_col_date" prefWidth="121.0" text="Tanggal" />
+                                 </columns>
+                                 <columnResizePolicy>
+                                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                 </columnResizePolicy>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="15.0" layoutY="325.0" prefHeight="261.0" prefWidth="849.0" stylesheets="@../../../CafeShopManagementSystem-main/cafeShopManagementSystem/src/cafeshopmanagementsystem/mainFormDesign.css" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="14.0">
+                           <styleClass>
+                              <String fx:value="white-bg" />
+                              <String fx:value="radius" />
+                              <String fx:value="shadow" />
+                           </styleClass>
+                           <children>
+                              <Label layoutX="56.0" layoutY="30.0" text="ID produk:">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="inventory_productID" layoutX="134.0" layoutY="28.0" prefHeight="25.0" prefWidth="128.0" />
+                              <Label layoutX="32.0" layoutY="70.0" text="Nama Produk:">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="inventory_productName" layoutX="134.0" layoutY="67.0" prefHeight="25.0" prefWidth="168.0" />
+                              <Label layoutX="91.0" layoutY="110.0" text="Tipe:">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <ComboBox fx:id="inventory_type" layoutX="134.0" layoutY="107.0" prefHeight="25.0" prefWidth="168.0" promptText="Pilih Tipe" stylesheets="@../css/gotaniDesign.css" />
+                              <Label layoutX="388.0" layoutY="31.0" text="Stok:">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="inventory_stock" layoutX="432.0" layoutY="28.0" prefHeight="25.0" prefWidth="168.0" promptText="0" />
+                              <Label layoutX="353.0" layoutY="70.0" text="Harga:">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="inventory_price" layoutX="432.0" layoutY="68.0" prefHeight="25.0" prefWidth="168.0" promptText="Rp. 0" />
+                              <AnchorPane layoutX="833.0" layoutY="35.0" prefHeight="115.0" prefWidth="199.0" stylesheets="@../css/menuToko.css" AnchorPane.rightAnchor="43.0">
+                                 <styleClass>
+                                    <String fx:value="white-bg" />
+                                    <String fx:value="shadow" />
+                                 </styleClass>
+                                 <children>
+                                    <ImageView fx:id="inventory_imageView" fitHeight="115.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+                                 </children>
+                              </AnchorPane>
+                              <Button fx:id="inventory_importBtn" layoutX="884.0" layoutY="164.0" mnemonicParsing="false" onAction="#inventoryImportBtn" prefHeight="26.0" prefWidth="99.0" stylesheets="@../css/gotaniDesign.css" text="Impor" AnchorPane.rightAnchor="93.0">
+                                 <styleClass>
+                                    <String fx:value="btn" />
+                                    <String fx:value="radius" />
+                                 </styleClass></Button>
+                              <Button fx:id="inventory_addBtn" layoutX="105.0" layoutY="189.0" mnemonicParsing="false" onAction="#inventoryAddBtn" prefHeight="41.0" prefWidth="112.0" stylesheets="@../css/gotaniDesign.css" text="Tambah" AnchorPane.bottomAnchor="31.0">
+                                 <styleClass>
+                                    <String fx:value="btn" />
+                                    <String fx:value="radius" />
+                                 </styleClass></Button>
+                              <Button fx:id="inventory_updateBtn" layoutX="238.0" layoutY="189.0" mnemonicParsing="false" onAction="#inventoryUpdateBtn" prefHeight="41.0" prefWidth="112.0" stylesheets="@../css/gotaniDesign.css" text="Update" AnchorPane.bottomAnchor="31.0">
+                                 <styleClass>
+                                    <String fx:value="btn" />
+                                    <String fx:value="radius" />
+                                 </styleClass></Button>
+                              <Button fx:id="inventory_clearBtn" layoutX="395.0" layoutY="189.0" mnemonicParsing="false" onAction="#inventoryClearBtn" prefHeight="41.0" prefWidth="112.0" stylesheets="@../css/gotaniDesign.css" text="Hapus Semua" AnchorPane.bottomAnchor="31.0">
+                                 <styleClass>
+                                    <String fx:value="btn" />
+                                    <String fx:value="radius" />
+                                 </styleClass></Button>
+                              <Button fx:id="inventory_deleteBtn" layoutX="528.0" layoutY="189.0" mnemonicParsing="false" onAction="#inventoryDeleteBtn" prefHeight="41.0" prefWidth="112.0" stylesheets="@../css/gotaniDesign.css" text="Hapus" AnchorPane.bottomAnchor="31.0">
+                                 <styleClass>
+                                    <String fx:value="btn" />
+                                    <String fx:value="radius" />
+                                 </styleClass></Button>
+                              <Label layoutX="386.0" layoutY="112.0" text="Status:">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <ComboBox fx:id="inventory_status" layoutX="432.0" layoutY="108.0" prefHeight="25.0" prefWidth="168.0" promptText="Pilih Status" stylesheets="@../css/gotaniDesign.css" />
+                           </children>
+                        </AnchorPane>
+                        <Separator layoutX="14.0" layoutY="312.0" prefHeight="5.0" prefWidth="852.0" AnchorPane.bottomAnchor="283.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="12.0" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="customers_form" prefHeight="820.0" prefWidth="1105.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <AnchorPane layoutX="21.0" layoutY="21.0" prefHeight="558.0" prefWidth="836.0" stylesheets="@../css/gotaniDesign.css" AnchorPane.bottomAnchor="21.0" AnchorPane.leftAnchor="21.0" AnchorPane.rightAnchor="21.0" AnchorPane.topAnchor="21.0">
+                           <styleClass>
+                              <String fx:value="white-bg" />
+                              <String fx:value="shadow" />
+                              <String fx:value="radius" />
+                           </styleClass>
+                           <children>
+                              <Label layoutX="18.0" layoutY="14.0" text="Pelanggan" AnchorPane.leftAnchor="18.0" AnchorPane.topAnchor="14.0">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                              <TableView fx:id="customers_tableView" layoutX="18.0" layoutY="57.0" prefHeight="487.0" prefWidth="800.0" tableMenuButtonVisible="true" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="18.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="57.0">
+                                 <columns>
+                                    <TableColumn fx:id="customers_col_customerID" prefWidth="211.0" text="ID Pelanggan" />
+                                    <TableColumn fx:id="customers_col_total" prefWidth="241.0" text="Total (Rp)" />
+                                    <TableColumn fx:id="customers_col_date" prefWidth="171.0" text="Tanggal" />
+                                    <TableColumn fx:id="customers_col_cashier" prefWidth="175.0" text="Nama Kasir" />
+                                 </columns>
+                                 <columnResizePolicy>
+                                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                 </columnResizePolicy>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="artikel_form" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="820.0" prefWidth="1105.0" style="-fx-background-color: 0c2027;" visible="false">
+                           <children>
+                              <BorderPane layoutX="-3.0" prefHeight="820.0" prefWidth="1111.0">
+                                 <top>
+                                    <AnchorPane prefHeight="41.0" prefWidth="1111.0" BorderPane.alignment="CENTER">
+                                       <children>
+                                          <Label layoutX="484.0" layoutY="17.0" text="ARTIKEL" textFill="#0c2027">
+                                             <font>
+                                                <Font name="System Bold" size="36.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </AnchorPane>
+                                 </top>
+                                 <center>
+                                    <AnchorPane prefHeight="707.0" prefWidth="1111.0" BorderPane.alignment="CENTER">
+                                       <children>
+                                          <Button alignment="TOP_LEFT" contentDisplay="GRAPHIC_ONLY" layoutX="11.0" layoutY="20.0" mnemonicParsing="false" prefHeight="318.0" prefWidth="0.0" text="Button">
+                                             <graphic>
+                                                <ImageView fitHeight="230.0" fitWidth="248.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../images/artikel1.jpg" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                             <styleClass>
+                                                <String fx:value="shadow" />
+                                                <String fx:value="radius" />
+                                                <String fx:value="btn" />
+                                             </styleClass>
+                                             <stylesheets>
+                                                <URL value="@../css/gotaniDesign.css" />
+                                                <URL value="@../css/menuToko.css" />
+                                             </stylesheets>
+                                          </Button>
+                                          <Button alignment="TOP_LEFT" contentDisplay="GRAPHIC_ONLY" layoutX="285.0" layoutY="19.0" mnemonicParsing="false" prefHeight="318.0" prefWidth="0.0" text="Button">
+                                             <graphic>
+                                                <ImageView fitHeight="230.0" fitWidth="248.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../images/artikel2.jpg" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                             <styleClass>
+                                                <String fx:value="shadow" />
+                                                <String fx:value="radius" />
+                                                <String fx:value="btn" />
+                                             </styleClass>
+                                             <stylesheets>
+                                                <URL value="@../css/gotaniDesign.css" />
+                                                <URL value="@../css/menuToko.css" />
+                                             </stylesheets>
+                                          </Button>
+                                          <Button alignment="TOP_LEFT" contentDisplay="GRAPHIC_ONLY" layoutX="559.0" layoutY="18.0" mnemonicParsing="false" prefHeight="318.0" prefWidth="0.0" text="Button">
+                                             <graphic>
+                                                <ImageView fitHeight="202.0" fitWidth="248.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../images/artikel3.jpg" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                             <styleClass>
+                                                <String fx:value="shadow" />
+                                                <String fx:value="radius" />
+                                                <String fx:value="btn" />
+                                             </styleClass>
+                                             <stylesheets>
+                                                <URL value="@../css/gotaniDesign.css" />
+                                                <URL value="@../css/menuToko.css" />
+                                             </stylesheets>
+                                          </Button>
+                                          <Text fill="#0c2027" fontSmoothingType="LCD" layoutX="573.0" layoutY="262.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MERAWAT TERNAK SEHAT DAN PRODUKTIF: PANDUAN PEMULA UNTUK PETERNAK" textAlignment="CENTER" wrappingWidth="235.31182861328125">
+                                             <font>
+                                                <Font name="System Bold" size="16.0" />
+                                             </font>
+                                          </Text>
+                                          <Button alignment="TOP_LEFT" contentDisplay="GRAPHIC_ONLY" layoutX="833.0" layoutY="17.0" mnemonicParsing="false" prefHeight="318.0" prefWidth="0.0" text="Button">
+                                             <graphic>
+                                                <ImageView fitHeight="230.0" fitWidth="248.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../images/artikel4.jpg" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                             <styleClass>
+                                                <String fx:value="shadow" />
+                                                <String fx:value="radius" />
+                                                <String fx:value="btn" />
+                                             </styleClass>
+                                             <stylesheets>
+                                                <URL value="@../css/gotaniDesign.css" />
+                                                <URL value="@../css/menuToko.css" />
+                                             </stylesheets>
+                                          </Button>
+                                          <Text fill="#0c2027" fontSmoothingType="LCD" layoutX="25.0" layoutY="255.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TIPS MENGOPTIMALKAN HASIL PANEN DENGAN TEKNIK PEMUPUKAN YANG TEPAT" textAlignment="CENTER" wrappingWidth="235.31182861328125">
+                                             <font>
+                                                <Font name="System Bold" size="16.0" />
+                                             </font>
+                                          </Text>
+                                          <Text fill="#0c2027" fontSmoothingType="LCD" layoutX="301.0" layoutY="253.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MEMBASMI HAMA DAN PENYAKIT TANAMAN SECARA ALAMI DAN RAMAH LINGKUNGAN" textAlignment="CENTER" wrappingWidth="235.31182861328125">
+                                             <font>
+                                                <Font name="System Bold" size="16.0" />
+                                             </font>
+                                          </Text>
+                                          <Text fill="#0c2027" fontSmoothingType="LCD" layoutX="847.0" layoutY="257.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MELAWAN INFLASI PANGAN: STRATEGI MENINGKATKAN PRODUKSI PERTANIAN LOKAL" textAlignment="CENTER" wrappingWidth="235.31182861328125">
+                                             <font>
+                                                <Font name="System Bold" size="16.0" />
+                                             </font>
+                                          </Text>
+                                          <Button alignment="TOP_LEFT" contentDisplay="GRAPHIC_ONLY" layoutX="11.0" layoutY="365.0" mnemonicParsing="false" prefHeight="318.0" prefWidth="0.0" text="Button">
+                                             <graphic>
+                                                <ImageView fitHeight="230.0" fitWidth="248.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../images/artikel5.jpg" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                             <styleClass>
+                                                <String fx:value="shadow" />
+                                                <String fx:value="radius" />
+                                                <String fx:value="btn" />
+                                             </styleClass>
+                                             <stylesheets>
+                                                <URL value="@../css/gotaniDesign.css" />
+                                                <URL value="@../css/menuToko.css" />
+                                             </stylesheets>
+                                          </Button>
+                                          <Button alignment="TOP_LEFT" contentDisplay="GRAPHIC_ONLY" layoutX="285.0" layoutY="364.0" mnemonicParsing="false" prefHeight="318.0" prefWidth="0.0" text="Button">
+                                             <graphic>
+                                                <ImageView fitHeight="230.0" fitWidth="248.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../images/artikel6.jpg" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                             <styleClass>
+                                                <String fx:value="shadow" />
+                                                <String fx:value="radius" />
+                                                <String fx:value="btn" />
+                                             </styleClass>
+                                             <stylesheets>
+                                                <URL value="@../css/gotaniDesign.css" />
+                                                <URL value="@../css/menuToko.css" />
+                                             </stylesheets>
+                                          </Button>
+                                          <Button alignment="TOP_LEFT" contentDisplay="GRAPHIC_ONLY" layoutX="559.0" layoutY="363.0" mnemonicParsing="false" prefHeight="318.0" prefWidth="0.0" text="Button">
+                                             <graphic>
+                                                <ImageView fitHeight="230.0" fitWidth="248.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../images/artikel7.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                             <styleClass>
+                                                <String fx:value="shadow" />
+                                                <String fx:value="radius" />
+                                                <String fx:value="btn" />
+                                             </styleClass>
+                                             <stylesheets>
+                                                <URL value="@../css/gotaniDesign.css" />
+                                                <URL value="@../css/menuToko.css" />
+                                             </stylesheets>
+                                          </Button>
+                                          <Text fill="#0c2027" fontSmoothingType="LCD" layoutX="573.0" layoutY="597.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MEMANFAATKAN TEKNOLOGI INFORMASI UNTUK PEMASARAN PRODUK HASIL TANI" textAlignment="CENTER" wrappingWidth="235.31182861328125">
+                                             <font>
+                                                <Font name="System Bold" size="16.0" />
+                                             </font>
+                                          </Text>
+                                          <Button alignment="TOP_LEFT" contentDisplay="GRAPHIC_ONLY" layoutX="833.0" layoutY="362.0" mnemonicParsing="false" prefHeight="318.0" prefWidth="0.0" text="Button">
+                                             <graphic>
+                                                <ImageView fitHeight="230.0" fitWidth="248.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../images/artikel8.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                             <styleClass>
+                                                <String fx:value="shadow" />
+                                                <String fx:value="radius" />
+                                                <String fx:value="btn" />
+                                             </styleClass>
+                                             <stylesheets>
+                                                <URL value="@../css/gotaniDesign.css" />
+                                                <URL value="@../css/menuToko.css" />
+                                             </stylesheets>
+                                          </Button>
+                                          <Text fill="#0c2027" fontSmoothingType="LCD" layoutX="25.0" layoutY="596.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MENGUBAH SAMPAH ORGANIK MENJADI PUPUK BERKUALITAS: PANDUAN MEMBUAT KOMPOS" textAlignment="CENTER" wrappingWidth="235.31182861328125">
+                                             <font>
+                                                <Font name="System Bold" size="16.0" />
+                                             </font>
+                                          </Text>
+                                          <Text fill="#0c2027" fontSmoothingType="LCD" layoutX="298.0" layoutY="596.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MERAWAT DAN MEMPERPANJANG UMUR ALAT PERTANIAN: TIPS PERAWATAN SEDERHANA" textAlignment="CENTER" wrappingWidth="235.31182861328125">
+                                             <font>
+                                                <Font name="System Bold" size="16.0" />
+                                             </font>
+                                          </Text>
+                                          <Text fill="#0c2027" fontSmoothingType="LCD" layoutX="849.0" layoutY="615.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MEMANFAATKAN TEKNOLOGI DRONE DALAM PERTANIAN" textAlignment="CENTER" wrappingWidth="235.31182861328125">
+                                             <font>
+                                                <Font name="System Bold" size="16.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </AnchorPane>
+                                 </center>
+                              </BorderPane>
+                              <Button layoutY="770.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="1071.0" styleClass="btn" stylesheets="@../css/menuToko.css" text="DISKUSI">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                                 <effect>
+                                    <DropShadow>
+                                       <color>
+                                          <Color opacity="0.4000000059604645" />
+                                       </color>
+                                    </DropShadow>
+                                 </effect>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="pembayaran_form" layoutX="1.0" layoutY="-2.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="621.0" prefWidth="1020.0" visible="false">
+                     <children>
+                        <BorderPane layoutX="1.0" layoutY="2.0" prefHeight="590.0" prefWidth="986.0">
+                           <center>
+                              <AnchorPane prefHeight="169.0" prefWidth="854.0" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <Pane layoutX="14.0" layoutY="50.0" prefHeight="248.0" prefWidth="546.0" style="-fx-background-color: white;">
+                                       <children>
+                                          <Label layoutX="18.0" layoutY="9.0" prefHeight="17.0" prefWidth="128.0" text="ALAMAT PENGIRIMAN" textFill="#000000df" />
+                                          <Label layoutX="14.0" layoutY="45.0" prefHeight="14.0" prefWidth="297.0" text="Rumah . Lia Prasetyo">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="14.0" layoutY="73.0" prefHeight="17.0" prefWidth="326.0" text="Jl. kaliurang no.19 Dukuh. Babayo, Kec. Babayo, Kab. Babayo" />
+                                          <Button layoutX="18.0" layoutY="117.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="132.0" style="-fx-background-color: white;" text="Ganti Alamat">
+                                             <effect>
+                                                <DropShadow>
+                                                   <color>
+                                                      <Color opacity="0.4000000059604645" />
+                                                   </color>
+                                                </DropShadow>
+                                             </effect>
+                                          </Button>
+                                       </children>
+                                       <effect>
+                                          <BoxBlur />
+                                       </effect>
+                                    </Pane>
+                                    <Label layoutX="21.0" layoutY="14.0" text="Pengiriman">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                       <effect>
+                                          <BoxBlur />
+                                       </effect>
+                                    </Label>
+                                    <Pane layoutX="14.0" layoutY="241.0" prefHeight="158.0" prefWidth="407.0" style="-fx-background-color: white;">
+                                       <children>
+                                          <Label layoutX="110.0" layoutY="43.0" prefHeight="17.0" prefWidth="79.0" text="Nama Produk" />
+                                          <ImageView fitHeight="72.0" fitWidth="70.0" layoutX="12.0" layoutY="43.0" pickOnBounds="true" preserveRatio="true" />
+                                          <Label layoutX="14.0" layoutY="14.0" prefHeight="17.0" prefWidth="65.0" text="Nama Toko" textFill="#000000df" />
+                                          <SplitMenuButton layoutX="212.0" layoutY="115.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="165.0" style="-fx-background-color: white;" text="Pilih Pengiriman">
+                                             <items>
+                                                <MenuItem mnemonicParsing="false" text="Action 1" />
+                                                <MenuItem mnemonicParsing="false" text="Action 2" />
+                                             </items>
+                                             <effect>
+                                                <DropShadow>
+                                                   <color>
+                                                      <Color opacity="0.4000000059604645" />
+                                                   </color>
+                                                </DropShadow>
+                                             </effect>
+                                          </SplitMenuButton>
+                                       </children>
+                                       <effect>
+                                          <BoxBlur />
+                                       </effect>
+                                    </Pane>
+                                    <Label layoutX="330.0" layoutY="286.0" prefHeight="17.0" prefWidth="77.0" text="1 x Rp30.000">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                       <effect>
+                                          <BoxBlur />
+                                       </effect>
+                                    </Label>
+                                    <Pane layoutX="537.0" layoutY="41.0" prefHeight="242.0" prefWidth="292.0" style="-fx-background-color: white;">
+                                       <children>
+                                          <Label layoutX="14.0" layoutY="21.0" prefHeight="19.0" prefWidth="114.0" text="Ringkasan Belanja">
+                                             <font>
+                                                <Font name="System Bold" size="13.0" />
+                                             </font>
+                                          </Label>
+                                          <Button layoutX="53.0" layoutY="186.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="195.0" style="-fx-background-color: white;" text="Pilih Pembayaran">
+                                             <font>
+                                                <Font name="System Italic" size="12.0" />
+                                             </font>
+                                             <effect>
+                                                <DropShadow>
+                                                   <color>
+                                                      <Color opacity="0.4000000059604645" />
+                                                   </color>
+                                                </DropShadow>
+                                             </effect>
+                                          </Button>
+                                       </children>
+                                       <effect>
+                                          <BoxBlur />
+                                       </effect>
+                                    </Pane>
+                                    <Pane layoutX="225.0" prefHeight="445.0" prefWidth="425.0">
+                                       <children>
+                                          <Button layoutX="293.0" layoutY="390.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="112.0" style="-fx-background-color: white;" text="BELI">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                             <effect>
+                                                <DropShadow>
+                                                   <color>
+                                                      <Color opacity="0.4000000059604645" />
+                                                   </color>
+                                                </DropShadow>
+                                             </effect>
+                                          </Button>
+                                          <Button layoutX="29.0" layoutY="12.0" mnemonicParsing="false" prefWidth="143.0" style="-fx-background-color: white;" text="&lt;">
+                                             <effect>
+                                                <DropShadow>
+                                                   <color>
+                                                      <Color opacity="0.4000000059604645" />
+                                                   </color>
+                                                </DropShadow>
+                                             </effect>
+                                          </Button>
+                                          <Label layoutX="64.0" layoutY="12.0" text="Pembayaran">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </Pane>
+                                 </children>
+                              </AnchorPane>
+                           </center>
+                           <top>
+                              <AnchorPane prefHeight="57.0" prefWidth="854.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <Label layoutX="75.0" layoutY="11.0" prefHeight="35.0" prefWidth="85.0" text="GoTani" textFill="#13d737">
+                                       <font>
+                                          <Font name="System Bold" size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <Button layoutX="14.0" layoutY="16.0" mnemonicParsing="false" style="-fx-background-color: white;" text="&lt;">
+                                       <effect>
+                                          <DropShadow>
+                                             <color>
+                                                <Color opacity="0.4000000059604645" />
+                                             </color>
+                                          </DropShadow>
+                                       </effect>
+                                    </Button>
+                                 </children>
+                              </AnchorPane>
+                           </top>
+                        </BorderPane>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="menu_form" prefHeight="820.0" prefWidth="1105.0">
+                     <children>
+                        <AnchorPane layoutX="14.0" layoutY="17.0" prefHeight="762.0" prefWidth="709.0" stylesheets="@../../../CafeShopManagementSystem-main/cafeShopManagementSystem/src/cafeshopmanagementsystem/mainFormDesign.css" AnchorPane.bottomAnchor="17.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="352.0" AnchorPane.topAnchor="17.0">
+                           <styleClass>
+                              <String fx:value="white-bg" />
+                              <String fx:value="shadow" />
+                              <String fx:value="radius" />
+                           </styleClass>
+                           <children>
+                              <ScrollPane fx:id="menu_scrollPane" layoutX="13.0" layoutY="14.0" prefHeight="538.0" prefWidth="486.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="13.0" AnchorPane.rightAnchor="13.0" AnchorPane.topAnchor="14.0">
+                                 <content>
+                                    <GridPane fx:id="menu_gridPane" prefHeight="14.0" prefWidth="96.0">
+                                       <columnConstraints>
+                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                       </columnConstraints>
+                                    </GridPane>
+                                 </content>
+                              </ScrollPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="763.0" layoutY="116.0" prefHeight="673.0" prefWidth="320.0" stylesheets="@../css/menuToko.css" AnchorPane.bottomAnchor="31.0" AnchorPane.rightAnchor="22.0" AnchorPane.topAnchor="116.0">
+                           <styleClass>
+                              <String fx:value="white-bg" />
+                              <String fx:value="shadow" />
+                              <String fx:value="radius" />
+                           </styleClass>
+                           <children>
+                              <TableView fx:id="menu_tableView" layoutX="13.0" layoutY="14.0" prefHeight="249.0" prefWidth="295.0" AnchorPane.bottomAnchor="303.0" AnchorPane.leftAnchor="13.0" AnchorPane.rightAnchor="12.0" AnchorPane.topAnchor="14.0">
+                                 <columns>
+                                    <TableColumn fx:id="menu_col_productName" prefWidth="115.0" text="Nama Produk" />
+                                    <TableColumn fx:id="menu_col_quantity" prefWidth="79.0" text="Banyaknya" />
+                                    <TableColumn fx:id="menu_col_price" prefWidth="99.0" text="Harga" />
+                                 </columns>
+                              </TableView>
+                              <Label layoutX="13.0" layoutY="405.0" text="Total Harga: " AnchorPane.bottomAnchor="262.0" AnchorPane.rightAnchor="222.5">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="menu_total" layoutX="141.0" layoutY="405.0" prefHeight="21.0" prefWidth="127.0" text="Rp. 0" AnchorPane.bottomAnchor="262.0" AnchorPane.rightAnchor="52.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="14.0" layoutY="435.0" text="Total Pembayaran:" AnchorPane.bottomAnchor="232.0" AnchorPane.rightAnchor="183.5">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="menu_amount" layoutX="142.0" layoutY="433.0" prefHeight="25.0" prefWidth="126.0" promptText="Rp. 0" AnchorPane.bottomAnchor="230.0" AnchorPane.rightAnchor="52.0" />
+                              <Label layoutX="13.0" layoutY="465.0" text="Kembalian:" AnchorPane.bottomAnchor="202.0" AnchorPane.rightAnchor="234.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="menu_change" layoutX="141.0" layoutY="465.0" prefHeight="21.0" prefWidth="127.0" text="Rp. 0" AnchorPane.bottomAnchor="202.0" AnchorPane.rightAnchor="52.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <Button fx:id="menu_payBtn" layoutX="15.0" layoutY="420.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="290.0" styleClass="btn" stylesheets="@../css/menuToko.css" text="Pesan Sekarang" AnchorPane.bottomAnchor="105.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" />
+                              <Button fx:id="menu_removeBtn" layoutX="28.0" layoutY="489.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="119.0" styleClass="btn" stylesheets="@../css/menuToko.css" text="Hapus" AnchorPane.bottomAnchor="36.0" AnchorPane.leftAnchor="28.0" />
+                              <Button fx:id="menu_receiptBtn" layoutX="173.0" layoutY="489.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="119.0" styleClass="btn" stylesheets="@../css/menuToko.css" text="Kuitansi" AnchorPane.bottomAnchor="36.0" AnchorPane.rightAnchor="28.0" />
+                           </children>
+                        </AnchorPane>
+                        <Label layoutX="786.0" layoutY="23.0" text="Selamat Datang di Toko GoTani!">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="831.0" layoutY="50.0" text="Anda sedang mencari produk apa?" />
+                        <TextField layoutX="809.0" layoutY="77.0" prefHeight="28.0" prefWidth="274.0" promptText="Cari produk yang ingin anda beli di sini" />
+                        <Button layoutX="756.0" layoutY="76.0" mnemonicParsing="false" prefHeight="14.0" prefWidth="47.0" styleClass="btn" stylesheets="@../css/menuToko.css" text="Cari">
+                           <effect>
+                              <DropShadow>
+                                 <color>
+                                    <Color opacity="0.0" />
+                                 </color>
+                              </DropShadow>
+                           </effect>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="384.0" layoutY="180.0" prefHeight="820.0" prefWidth="1106.0" style="-fx-background-color: #0c2027;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Button fx:id="backBtn_Artikel" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" styleClass="login-btn" stylesheets="@../css/gotaniDesign.css" text="Back">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Button>
+                        <Line endX="-48.0" endY="560.0" layoutX="42.0" layoutY="259.0" startX="-48.0" startY="-262.5" stroke="#eaa037" />
+                        <Label layoutX="106.0" layoutY="11.0" text="TIPS MENGOPTIMALKAN HASIL PANEN DENGAN TEKNIK PEMUPUKAN YANG TEPAT" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="24.0" />
+                           </font>
+                        </Label>
+                      <AnchorPane layoutX="-207.0" layoutY="-151.0" minHeight="0.0" minWidth="0.0" prefHeight="458.0" prefWidth="548.0" />
+                        <ScrollPane layoutY="60.0" prefHeight="761.0" prefWidth="1105.0" />
+                     </children>
+                  </AnchorPane>
+               </children></AnchorPane>
+         </center></BorderPane>
+   </children>
+</AnchorPane>
