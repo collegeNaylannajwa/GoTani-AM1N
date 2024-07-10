@@ -9,6 +9,27 @@
             "name": "Main",
             "request": "launch",
             "mainClass": "home.Main",
+            "projectName": "GOTANI KELOMPOK AM1N_dcc26f5c"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "Main",
+            "projectName": "GOTANI_e88917a2"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "home.Main",
+            "projectName": "GOTANI_e88917a2"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "home.Main",
             "projectName": "GOTANI_52a46fe4"
         },
         {

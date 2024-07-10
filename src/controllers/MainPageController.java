@@ -62,6 +62,9 @@ import net.sf.jasperreports.view.JasperViewer;
 public class MainPageController implements Initializable {
 
     @FXML
+    private AnchorPane bacaArtikel_form;
+
+    @FXML
     private GridPane menu_gridPane;
 
     @FXML
@@ -565,6 +568,7 @@ public class MainPageController implements Initializable {
         menu_form.setVisible(false);
         customers_form.setVisible(false);
         artikel_form.setVisible(false);
+        bacaArtikel_form.setVisible(false);
     }
 
     @FXML
@@ -575,6 +579,7 @@ public class MainPageController implements Initializable {
         menu_form.setVisible(true);
         customers_form.setVisible(false);
         artikel_form.setVisible(false);
+        bacaArtikel_form.setVisible(false);
     }
 
     @FXML
@@ -585,6 +590,7 @@ public class MainPageController implements Initializable {
         menu_form.setVisible(false);
         customers_form.setVisible(false);
         artikel_form.setVisible(false);
+        bacaArtikel_form.setVisible(false);
     }
 
     @FXML
@@ -595,6 +601,7 @@ public class MainPageController implements Initializable {
         menu_form.setVisible(false);
         customers_form.setVisible(false);
         artikel_form.setVisible(false);
+        bacaArtikel_form.setVisible(false);
     }
 
     @FXML
@@ -605,6 +612,7 @@ public class MainPageController implements Initializable {
         menu_form.setVisible(false);
         customers_form.setVisible(true);
         artikel_form.setVisible(false);
+        bacaArtikel_form.setVisible(false);
     }
 
     @FXML
@@ -615,6 +623,40 @@ public class MainPageController implements Initializable {
         menu_form.setVisible(false);
         customers_form.setVisible(false);
         artikel_form.setVisible(true);
+        bacaArtikel_form.setVisible(false);
+    }
+
+    @FXML
+    void handleArtikelBtnTips(ActionEvent event) {
+        beranda_form.setVisible(false);
+        dashboard_form.setVisible(false);
+        inventory_form.setVisible(false);
+        menu_form.setVisible(false);
+        customers_form.setVisible(false);
+        artikel_form.setVisible(false);
+        bacaArtikel_form.setVisible(true);
+    }
+
+    @FXML
+    void handleUnggahArtikelBtn(ActionEvent event) {
+        beranda_form.setVisible(false);
+        dashboard_form.setVisible(false);
+        inventory_form.setVisible(false);
+        menu_form.setVisible(false);
+        customers_form.setVisible(false);
+        artikel_form.setVisible(false);
+        bacaArtikel_form.setVisible(false);
+    }
+
+    @FXML
+    void handleBackBtn_Artikel(ActionEvent event){
+        beranda_form.setVisible(false);
+        dashboard_form.setVisible(false);
+        inventory_form.setVisible(false);
+        menu_form.setVisible(false);
+        customers_form.setVisible(false);
+        artikel_form.setVisible(true);
+        bacaArtikel_form.setVisible(false);
     }
 
     private String[] typeList = {"Alat Tani", "Hasil Tani"};
@@ -635,13 +677,6 @@ public class MainPageController implements Initializable {
         }
         ObservableList listData = FXCollections.observableArrayList(statusL);
         inventory_status.setItems(listData); 
-    }
-
-
-    @FXML
-    void handleUnggahArtikelBtn(ActionEvent event) {
-        // Implementasi untuk mengunggah artikel
-        System.out.println("Unggah Artikel button clicked");
     }
 
     // @FXML
@@ -1296,6 +1331,5 @@ public class MainPageController implements Initializable {
         menuShowOrderData();
         
         customersShowData();
-        
     }
 }

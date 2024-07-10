@@ -19,4 +19,14 @@
     <password>1</password>
     <username>a</username>
   </user>
+  <user>
+    <email>haidar@gmail.com</email>
+    <password>1234</password>
+    <username>haidar</username>
+  </user>
+  <user>
+    <email>a@gmail.com</email>
+    <password>1234</password>
+    <username>tha</username>
+  </user>
 </list>

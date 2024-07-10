@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="820.0" prefWidth="1105.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <BorderPane layoutY="-1.0" prefHeight="820.0" prefWidth="1105.0">
+         <top>
+            <AnchorPane prefHeight="83.0" prefWidth="1105.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button layoutX="33.0" layoutY="29.0" mnemonicParsing="false" text="&gt;">
+                     <effect>
+                        <DropShadow>
+                           <color>
+                              <Color opacity="0.4000000059604645" />
+                           </color>
+                        </DropShadow>
+                     </effect>
+                  </Button>
+                  <Label layoutX="470.0" layoutY="24.0" text="BACA ARTIKEL">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </top>
+         <center>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="298.0" fitWidth="807.0" layoutX="269.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../GOTANI%20EXPO%202024/GOTANI_LAMA/src/images/PupukOrganik2.jpg" />
+                     </image>
+                  </ImageView>
+                  <Label alignment="TOP_LEFT" layoutX="9.0" layoutY="440.0" lineSpacing="3.0" prefHeight="291.0" prefWidth="1088.0" text="Pertanian merupakan sektor vital bagi perekonomian Indonesia, yang memberikan kontribusi signifikan terhadap ketahanan pangan dan kesejahteraan masyarakat. Namun, praktik pertanian konvensional yang intensif telah menimbulkan dampak negatif terhadap lingkungan, seperti penurunan kualitas tanah, pencemaran air, dan penurunan keanekaragaman hayati. Untuk menghadapi tantangan ini, pertanian organik muncul sebagai solusi yang berkelanjutan, yang tidak hanya ramah lingkungan tetapi juga meningkatkan kesehatan dan kesejahteraan masyarakat.Pertanian Organik: Konsep dan ManfaatPertanian organik merupakan sistem pertanian yang mengandalkan bahan-bahan alami untuk memelihara kesuburan tanah dan mengendalikan hama serta penyakit tanaman. Prinsip utama dari pertanian organik adalah kesehatan, ekologi, keadilan, dan perlindungan. Dengan tidak menggunakan bahan kimia sintetis, pertanian organik bertujuan untuk menghasilkan pangan yang sehat dan aman bagi konsumen, serta menjaga keseimbangan ekosistem.Manfaat Pertanian OrganikManfaat dari pertanian organik sangatlah luas. Pertama, pertanian organik membantu memperbaiki kualitas tanah melalui penggunaan pupuk kompos dan pupuk hijau, yang meningkatkan kandungan bahan organik dalam tanah dan mendorong aktivitas mikroorganisme tanah yang bermanfaat.Kedua, dengan tidak menggunakan pestisida kimia, pertanian organik mendukung keberadaan organisme yang menguntungkan, seperti serangga predator dan mikroba tanah, yang berperan penting dalam pengendalian hama secara alami.Ketiga, produk pertanian organik memiliki nilai gizi yang lebih tinggi dan bebas dari residu bahan kimia, sehingga lebih aman untuk dikonsumsi." textAlignment="JUSTIFY" textOverrun="WORD_ELLIPSIS" wrapText="true">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="390.0" layoutY="358.0" text="TEKNIK BUDIDAYA TANAMAN SAWI HIJAU">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>
